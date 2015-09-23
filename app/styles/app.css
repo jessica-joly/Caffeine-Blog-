@@ -6,6 +6,31 @@
   margin-top: 6%;
 }
 
+.post-wrapper {
+  margin-left: 10rem;
+}
+
+.post-display {
+  height: 30rem;
+  margin-bottom: 5%;
+}
+
 .post-display img{
-  width: 75%;
+  width: 40rem;
+  height: 25rem;
+  border-radius: 2%;
+}
+
+.post-display-title{
+  position: absolute;
+  margin-left: 0rem;
+  margin-top: 18rem;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 10px;
+  font-size: 1.2em;
+  max-width: 30rem;
+
 }
