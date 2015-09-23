@@ -5,3 +5,7 @@
 .main-body {
   margin-top: 6%;
 }
+
+.post-display img{
+  width: 75%;
+}
