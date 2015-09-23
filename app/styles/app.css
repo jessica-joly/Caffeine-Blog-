@@ -1,3 +1,8 @@
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+}
+
 .navbar-default {
   background: #fff;
 }
@@ -32,5 +37,16 @@
   border-radius: 10px;
   font-size: 1.2em;
   max-width: 30rem;
+}
 
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: color .5s linear;
+}
+
+a:hover {
+  color: #996633;
+  text-decoration: none;
+  transition: color .5s linear;
 }
