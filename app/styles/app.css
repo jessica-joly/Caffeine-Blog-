@@ -1,6 +1,12 @@
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 100;
+  color: #333;
+}
+
+.navbar {
+  max-width: 75%;
+  margin-left: 12.5%;
 }
 
 .navbar-default {
@@ -49,4 +55,25 @@ a:hover {
   color: #996633;
   text-decoration: none;
   transition: color .5s linear;
+}
+
+.post-header {
+  font-size: 1.5em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.post-body {
+  max-width: 85%;
+  margin-left: 6%;
+}
+
+.post-user {
+  font-size: 1.0em;
+  font-weight: 300;
+  text-align: center;
+}
+
+hr {
+  width: 50%;
 }
