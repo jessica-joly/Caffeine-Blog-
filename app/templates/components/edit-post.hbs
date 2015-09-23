@@ -1,2 +1,32 @@
-<p>{{model.title}}</p>
 <button class ="btn btn-danger"{{action 'deletePost' model}}>Delete Post</button>
+
+{{#if updateShowing}}
+
+<h1>Update Post</h1>
+<form>
+  <div class="form-group">
+    <label for="user">Author</label>
+    {{input value=user id="user" class="form-control" placeholder=model.user}}
+  </div>
+
+  <div class="form-group">
+    <label for="title">Title</label>
+    {{input value=title id="title" class="form-control" placeholder=model.title}}
+  </div>
+
+  <div class="form-group">
+    <label for="body">Body</label>
+    {{textarea value=model.body id="body" rows="5" class="form-control"}}
+  </div>
+
+  <div class="form-group">
+    <label for="image">Image URL</label>
+    {{input value=image id="image" class="form-control" placeholder=model.image}}
+  </div>
+
+  <button class="btn btn-primary" {{action 'update' model}}>Save</button>
+</form>
+
+{{else}}
+<button class ="btn btn-warning"{{action 'updateShow'}}>Update Post</button>
+{{/if}}
