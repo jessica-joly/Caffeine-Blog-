@@ -1,7 +1,9 @@
 
-<div class ="col-md-6 post-display">
-  <div class="post-display-title">
-    {{post.title}}
+{{#link-to 'post' post.id}}
+  <div class ="col-md-6 post-display">
+    <div class="post-display-title">
+      {{post.title}}
+    </div>
+    <img src="{{post.image}}">
   </div>
-  <img src="{{post.image}}">
-</div>
+{{/link-to}}
