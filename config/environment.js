@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'caffeine-blog',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-    firebase: 'https:///transcendingcoffee.firebaseio.com/',
+    firebase: 'https://transcendingcoffee.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
