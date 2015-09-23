@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  formShowing:false,
   actions: {
     save() {
       var params = {
@@ -10,6 +11,10 @@ export default Ember.Component.extend({
         image: this.get('image')
       };
       this.sendAction('save', params);
+    },
+
+    formShow() {
+      this.set('formShowing',true);
     }
   }
 });
