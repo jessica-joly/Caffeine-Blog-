@@ -6,8 +6,10 @@ export default Ember.Route.extend({
   },
   actions: {
     destroyPost(model) {
-      model.get('comments').forEach(function(comment) {
-        comment.destroyRecord();
+      model.get('comments').then(function(comments) {    
+        comments.forEach(function(comment) {
+          comment.destroyRecord();
+        });
       });
       model.destroyRecord();
       this.transitionTo('index');
