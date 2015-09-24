@@ -5,5 +5,6 @@ export default DS.Model.extend({
   title: DS.attr(),
   image: DS.attr(),
   body: DS.attr(),
-  comments: DS.hasMany('comment', {async: true})
+  comments: DS.hasMany('comment', {async: true}),
+  timestamp: DS.attr('number')
 });

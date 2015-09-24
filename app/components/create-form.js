@@ -8,7 +8,8 @@ export default Ember.Component.extend({
         title: this.get('title'),
         user: this.get('user'),
         body: this.get('body'),
-        image: this.get('image')
+        image: this.get('image'),
+        timestamp: new Date().getTime()
       };
       this.sendAction('save', params);
       this.set('formShowing', false);
