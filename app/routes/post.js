@@ -21,6 +21,11 @@ export default Ember.Route.extend({
       location.reload();
      },
 
+     destroyComment(comment) {
+       comment.destroyRecord();
+       this.transitionTo('post')
+     },
+
     update(model, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key] !== undefined) {
