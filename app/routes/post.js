@@ -18,6 +18,7 @@ export default Ember.Route.extend({
       newComment.save();
       params.post.save();
       this.transitionTo('post', params.post);
+      location.reload();
      },
 
     update(model, params) {
