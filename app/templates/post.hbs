@@ -16,7 +16,7 @@
 <h3>Comments</h3>
 <ul>
 {{#each model.comments as |comment|}}
-  {{comments-tile comment=comment destroyComment="destroyComment"}}
+  {{comments-tile comment=comment destroyComment="destroyComment" updateComment="updateComment"}}
 {{/each}}
 </ul>
 {{comment-form model=model saveComment="saveComment"}}

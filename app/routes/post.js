@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   },
   actions: {
     destroyPost(model) {
-      model.get('comments').then(function(comments) {    
+      model.get('comments').then(function(comments) {
         comments.forEach(function(comment) {
           comment.destroyRecord();
         });
@@ -26,6 +26,16 @@ export default Ember.Route.extend({
      destroyComment(comment) {
        comment.destroyRecord();
        this.transitionTo('post')
+     },
+
+     updateComment(comment, params) {
+       Object.keys(params).forEach(function(key) {
+         if (params[key] !== undefined) {
+           comment.set(key, params[key]);
+         }
+       });
+       comment.save();
+       this.transitionTo('post');
      },
 
     update(model, params) {

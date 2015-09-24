@@ -11,6 +11,7 @@ export default Ember.Component.extend({
         image: this.get('image')
       };
       this.sendAction('save', params);
+      this.set('formShowing', false);
     },
 
     formShow() {

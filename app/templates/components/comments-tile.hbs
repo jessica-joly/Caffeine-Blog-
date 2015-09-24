@@ -1,3 +1,22 @@
 <li>{{comment.user}}: {{comment.body}}</li>
 
 <button class ="btn btn-warning"{{action 'deleteComment' comment}}>Delete Comment</button>
+
+{{#if updateCommentShowing}}
+<form>
+  <div class="form-group">
+    <label for="user">User</label>
+    {{input value=user id="user" class="form-control" placeholder=comment.user}}
+  </div>
+
+  <div class="form-group">
+    <label for="body">Body</label>
+    {{textarea value=body id="body" rows="5" class="form-control" placeholder=comment.body}}
+  </div>
+
+  <button class="btn btn-primary"{{action 'updateComment' comment}}>Update Comment</button>
+</form>
+
+{{else}}
+<button class ="btn btn-warning"{{action 'updateCommentShow'}}>Update Comment</button>
+{{/if}}
