@@ -20,6 +20,16 @@ module.exports = function(environment) {
       // when it is created
     },
 
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+      'font-src': "'self' fonts.gstatic.com",
+      'style-src': "'self' fonts.googleapis.com",
+      'connect-src': "'self'",
+      'img-src': "'self'",
+      'frame-src': "'none'"
+    },
+
     googleFonts: [
       'Open+Sans:300',
       'Josefin+Sans:100,300,400,600,700'
