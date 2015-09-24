@@ -1,0 +1,14 @@
+<h1>Add a comment</h1>
+<form>
+  <div class="form-group">
+    <label for="user">User</label>
+    {{input value=user id="user" class="form-control"}}
+  </div>
+
+  <div class="form-group">
+    <label for="body">Body</label>
+    {{textarea value=body id="body" rows="5" class="form-control"}}
+  </div>
+
+  <button class="btn btn-primary" {{action 'saveComment'}}>Save</button>
+</form>

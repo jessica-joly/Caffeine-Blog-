@@ -12,3 +12,11 @@
 <br>
 
 {{edit-post destroyPost="destroyPost" model=model update="update"}}
+
+<h3>Comments</h3>
+<ul>
+{{#each model.comments as |comment|}}
+  {{comments-tile comment=comment}}
+{{/each}}
+</ul>
+{{comment-form model=model saveComment="saveComment"}}
